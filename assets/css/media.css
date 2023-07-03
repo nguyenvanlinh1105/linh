@@ -1,0 +1,239 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* common */
+.separator{
+    border-bottom:1px solid #ccc;
+    margin-top:50px;
+}
+br{
+    width:100%;
+    height:1px;
+    border:1px solid #ccc;
+}
+.header{
+    position:fixed;
+    top:0;
+    height:56px;
+    background-color: #fff;
+    width:100%;
+    max-width: 100%;
+    box-shadow: 0px 2px 0px #ccc;
+    z-index: 2;  
+}
+.header-list{
+    margin:0 auto;
+    padding-left:0;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.header-list li a{
+    text-decoration: none;
+    color:#09080f;
+    font-size: 24px;
+    line-height:56px;
+    padding:10px;
+}
+.header-list li a:hover{
+    color:#f00b13;
+    background-color: #dfd6d6;
+}
+/* main */
+.row a{
+    text-decoration: none;
+    color:#000;
+}
+h2{
+    margin-top:30px;
+    color:#4fcb68;
+    font-size: 24px;
+    text-transform: capitalize;
+    padding:10px 5px;
+}
+h2 i{
+    padding-right:5px;
+}
+main{
+    margin-top:56px;
+}
+.container-product{
+    position: relative;
+    display:block;
+    box-shadow: 0px 2px 1px  #ccc;
+    border: 1px solid #ccc;
+}
+.product-brand{
+    display:flex;
+    justify-content: center; 
+}
+.product-img{
+    /* width:280px;
+    height:300px; */
+    width:60%;
+    height:300px;
+}
+.product-info{
+    display:flex;
+    justify-content: space-between;
+    padding:25px 15px 5px;
+    flex-wrap: wrap;
+}
+.text-heading{
+    font-size: 26;
+    text-transform: uppercase;
+}
+.product-price--old{
+    text-decoration: line-through;
+}
+.product-price--current{
+    color:#f34f4f;
+}
+.subtext-heading{
+    padding:0px 15px 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.product-decription{
+    padding:5px;
+    text-align: justify;
+    line-height: 1.4;
+}
+.sale--off{
+    position:absolute;
+    top:0;
+    right:0;
+    padding:10px 0;
+    width:80px;
+    text-align: center;
+    font-weight: 600;
+    color:#f34f4f;
+    background-color: yellow;
+}
+.sale--off::after{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width:0 40px 10px;
+    border-color: yellow yellow transparent yellow;
+    left:0;
+    bottom:-10px;
+}
+.home-filter{
+    margin-top:40px;
+    display:flex;
+    justify-content: center;
+}
+.home-filter-container{
+    display:flex;
+    height:56px;
+    align-items: center;
+}
+.home-filter span{
+    display:block;
+    padding:10px 20px;
+    margin:0 5px;
+    font-size: 20px;
+    font-weight: 300;
+    color:#666;
+}
+.home-filter span:nth-child(2){
+    background-color:  #e9d9d9;
+}
+.home-filter span:hover{
+    background-color: #e9d9d9;
+}
+footer{
+    margin: 60px 0 10px;
+}
+.copyrighted{
+    height:48px;
+    background-color: #d8cfcf;
+    text-align: center;
+    line-height:48px;
+    font-size: 14px;
+}
+.copyrighted a{
+    color:#555
+}
+/* css modal */
+.modal{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display:none;
+}
+.modal1{
+    display: block;
+}
+.modal1.hide{
+    display:none;
+    }
+.modal-container{
+    position:fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+    min-width:250px;
+    min-height:250px;
+    background-color: #fff;
+    padding: 20px 10px;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s,opacity linear 0.2s;
+    opacity: 0;
+}
+.modal-item{
+    font-size: 18px;
+    margin:20px 0px
+}
+.modal-close:hover{
+    background-color: #dc6b2e;
+    border-radius: 50%;
+    width:18px;
+    height:18px;
+}
+.modal-item:first-child{
+    font-size: 20px;
+    margin:5px 0 10px;
+    display:flex;
+    justify-content: space-between;
+}
+.modal-list a{
+    display:block;
+    width:100%;
+    text-decoration: none;
+    padding:10px 5px;
+    font-size: 18px;
+    font-weight: 300;
+    color:#000;
+}
+.modal-list a i{
+    padding-right:5px;
+}
+.modal-list a:hover{
+    background-color: #b4aeae;
+}
+.modal-input:checked ~ .modal-container{
+    transform: translateX(0);
+    opacity: 1;
+}
+.modal-input:checked ~ .modal{
+    display:block;
+}
+/* modal */
+.modal-hide{
+    display:none;
+}
+.modal-hide.show{
+    display: block;
+}

@@ -1,0 +1,36 @@
+.grid{
+    width:100%;
+    display:block;
+    padding:0;
+}
+.grid.wide{
+    max-width:1200px;
+    margin:0 auto;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+.col{
+    padding-left:4px;
+    padding-right:4px;
+}
+.row.no-gutters .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.c-4{
+    flex:0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.c-8{
+    flex:0 0 66.66667%;
+    max-width: 66.66667%;
+}
